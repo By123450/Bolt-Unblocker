@@ -1,0 +1,13 @@
+{
+  "name": "Bolt Unblocker Auto-Start",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "postCreateCommand": "npm install -g pnpm && pnpm install",
+  "postStartCommand": "pnpm start",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Bolt Unblocker",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
